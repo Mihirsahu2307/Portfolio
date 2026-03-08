@@ -1,0 +1,92 @@
+/* 
+  Custom CSS for Portfolio Blueprint
+  Tailwind CSS handles most utility classes, but this file is for 
+  global configurations, custom scrollbars, and complex animations.
+*/
+
+:root {
+  --nav-height: 4rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
+}
+
+/* Custom Scrollbar styled for dark mode */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a; /* Tailwind gray-900 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155; /* Tailwind gray-700 */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569; /* Tailwind gray-600 */
+}
+
+/* Selection */
+::selection {
+  background-color: #64ffda; /* Primary color */
+  color: #020617; /* Very dark text */
+}
+
+/* Base Link Styles */
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-up {
+  animation: slideUp 1s ease-out forwards;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out 0.5s forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animated Gradient Borders or special hover effects can go here */
+.section-heading h2 {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
