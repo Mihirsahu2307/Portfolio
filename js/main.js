@@ -1,8 +1,17 @@
 // Main JavaScript for Portfolio
 
+const GLOBALS = {
+    BLOG_TERM: 'Thoughts'
+};
+
 // Wait for DOM to fully load
 document.addEventListener('DOMContentLoaded', () => {
-    
+
+    // Populate dynamic blog terms
+    document.querySelectorAll('.js-blog-term').forEach(el => {
+        el.textContent = GLOBALS.BLOG_TERM;
+    });
+
     // --- Mobile Menu Toggle ---
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -10,19 +19,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuIcon = document.getElementById('menu-icon');
     const closeIcon = document.getElementById('close-icon');
     const mobileLinks = document.querySelectorAll('.mobile-link');
-    
+
     let isMenuOpen = false;
 
     function toggleMenu() {
         isMenuOpen = !isMenuOpen;
-        
+
         if (isMenuOpen) {
             // Open menu
             mobileMenu.classList.remove('translate-x-full');
             mobileMenuOverlay.classList.remove('hidden');
             // Small timeout to allow display:block to apply before animating opacity
             setTimeout(() => mobileMenuOverlay.classList.add('opacity-100'), 10);
-            
+
             menuIcon.classList.add('hidden');
             closeIcon.classList.remove('hidden');
             document.body.style.overflow = 'hidden'; // Prevent scrolling
@@ -32,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenu.classList.add('translate-x-full');
             mobileMenuOverlay.classList.remove('opacity-100');
             setTimeout(() => mobileMenuOverlay.classList.add('hidden'), 300);
-            
+
             menuIcon.classList.remove('hidden');
             closeIcon.classList.add('hidden');
             document.body.style.overflow = ''; // Restore scrolling
@@ -42,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     mobileMenuBtn.addEventListener('click', toggleMenu);
     mobileMenuOverlay.addEventListener('click', toggleMenu);
-    
+
     // Close mobile menu when a link is clicked
     mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -56,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
         const currentScrollY = window.scrollY;
-        
+
         // Add shadow/background on scroll
         if (currentScrollY > 50) {
             topNavbar.classList.add('shadow-lg');
@@ -75,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Scrolling up - show navbar
             topNavbar.style.transform = 'translateY(0)';
         }
-        
+
         lastScrollY = currentScrollY;
     });
 
@@ -83,16 +92,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
-            
+
             if (targetId === '#') return;
-            
+
             e.preventDefault();
             const targetElement = document.querySelector(targetId);
-            
+
             if (targetElement) {
                 // Get navbar height for offset
                 const navHeight = topNavbar.offsetHeight;
-                
+
                 window.scrollTo({
                     top: targetElement.offsetTop - navHeight,
                     behavior: 'smooth'
@@ -103,20 +112,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Reveal Animation on Scroll ---
     const revealElements = document.querySelectorAll('.reveal');
-    
+
     function checkReveal() {
         const windowHeight = window.innerHeight;
         const revealPoint = 150; // trigger point
-        
+
         revealElements.forEach(element => {
             const revealTop = element.getBoundingClientRect().top;
-            
+
             if (revealTop < windowHeight - revealPoint) {
                 element.classList.add('active');
             }
         });
     }
-    
+
     // Check initially and on scroll
     window.addEventListener('scroll', checkReveal);
     checkReveal(); // Initial check incase elements are in view

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoughts | Mihir Sahu</title>
+
+    <meta name="description" content="Personal thoughts and reading list of Mihir Sahu.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { DEFAULT: '#64ffda', dark: '#00bfa5' },
+                        secondary: { DEFAULT: '#8b5cf6' },
+                        gray: { 800: '#1e293b', 900: '#0f172a', 950: '#020617' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                        mono: ['SF Mono', 'Fira Code', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/components.js"></script>
+</head>
+
+<body class="bg-gray-900 text-gray-100 antialiased selection:bg-primary selection:text-white pt-24">
+
+    <!-- Navbar Web Component -->
+    <portfolio-navbar base-path="" active-page="blogs"></portfolio-navbar>
+
+    <main class="min-h-screen">
+        <section class="py-12 relative">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="mb-16">
+                    <h1 class="text-4xl md:text-5xl font-bold font-outfit text-white mb-6">Thoughts</h1>
+                    <p class="text-lg text-gray-400 leading-relaxed max-w-2xl mb-6">
+                        A repository of my thoughts and experiences.
+                    </p>
+                </div>
+
+                <div class="mt-4">
+                    <ul class="space-y-12">
+                        <!-- Blog Post 1 -->
+                        <li>
+                            <article>
+                                <p class="text-sm text-primary font-mono mb-2">March 10, 2026</p>
+                                <a href="posts/books.html" class="block group">
+                                    <h2
+                                        class="text-2xl font-bold text-gray-100 group-hover:text-primary transition-colors mb-3">
+                                        Books I have read/reading
+                                    </h2>
+                                    <p class="text-gray-400 leading-relaxed max-w-2xl">
+                                        I like to maintain this list as a badge of honor :P.
+                                        I mostly read philosophy and finance nowadays.
+                                    </p>
+                                </a>
+                                <a href="posts/books.html"
+                                    class="inline-flex items-center text-secondary hover:text-white transition-colors mt-4 text-sm font-medium">
+                                    Read Article
+                                    <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </a>
+                            </article>
+                        </li>
+                        <!-- Blog Post 2 -->
+                        <li>
+                            <article>
+                                <p class="text-sm text-primary font-mono mb-2">April 21, 2026</p>
+                                <a href="posts/compound-interest.html" class="block group">
+                                    <h2
+                                        class="text-2xl font-bold text-gray-100 group-hover:text-primary transition-colors mb-3">
+                                        Things that hold value and compound
+                                    </h2>
+                                    <p class="text-gray-400 leading-relaxed max-w-2xl">
+                                        Thoughts on long-term value creation.
+                                    </p>
+                                </a>
+                                <a href="posts/compound-interest.html"
+                                    class="inline-flex items-center text-secondary hover:text-white transition-colors mt-4 text-sm font-medium">
+                                    Read Article
+                                    <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </a>
+                            </article>
+                        </li>
+                        <!-- Blog Post 3 -->
+                        <li>
+                            <article>
+                                <p class="text-sm text-primary font-mono mb-2">April 21, 2026</p>
+                                <a href="posts/rising-value-of-prestige.html" class="block group">
+                                    <h2
+                                        class="text-2xl font-bold text-gray-100 group-hover:text-primary transition-colors mb-3">
+                                        Hot take: Value of prestige will go up in the future
+                                    </h2>
+                                    <p class="text-gray-400 leading-relaxed max-w-2xl">
+                                        Why prestige will become more valuable over time.
+                                    </p>
+                                </a>
+                                <a href="posts/rising-value-of-prestige.html"
+                                    class="inline-flex items-center text-secondary hover:text-white transition-colors mt-4 text-sm font-medium">
+                                    Read Article
+                                    <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </a>
+                            </article>
+                        </li>
+                        <!-- Blog Post 4 -->
+                        <li>
+                            <article>
+                                <p class="text-sm text-primary font-mono mb-2">April 21, 2026</p>
+                                <a href="posts/doomer-economy.html" class="block group">
+                                    <h2
+                                        class="text-2xl font-bold text-gray-100 group-hover:text-primary transition-colors mb-3">
+                                        The Doomer Economy
+                                    </h2>
+                                    <p class="text-gray-400 leading-relaxed max-w-2xl">
+                                        Navigating the Doomer Economy.
+                                    </p>
+                                </a>
+                                <a href="posts/doomer-economy.html"
+                                    class="inline-flex items-center text-secondary hover:text-white transition-colors mt-4 text-sm font-medium">
+                                    Read Article
+                                    <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </a>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+</body>
+
+</html>
