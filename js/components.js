@@ -39,7 +39,7 @@ class PortfolioNavbar extends HTMLElement {
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                             </svg>
                         </a>
-                        <a href="${basePath}assets/Mihir_Sahu_Resume_SWE_ML.pdf" target="_blank" class="px-4 py-2 rounded-md bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all text-sm font-medium border border-primary/20">Resume</a>
+                        <a href="https://drive.google.com/file/d/1lDx30fqkQfHzIcijCxaM36QehCq3VeuA/view?usp=sharing" target="_blank" class="px-4 py-2 rounded-md bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all text-sm font-medium border border-primary/20">Resume</a>
                     </nav>
     
                     <!-- Mobile Menu Button -->
@@ -70,7 +70,7 @@ class PortfolioNavbar extends HTMLElement {
                         </svg>
                     </a>
                     <div class="pt-4 mt-auto border-t border-gray-800">
-                        <a href="${basePath}assets/Mihir_Sahu_Resume_SWE_ML.pdf" target="_blank" class="block w-full text-center px-4 py-3 rounded-md bg-primary text-white font-medium hover:bg-primary-dark transition-colors shadow-lg shadow-primary/20">Download Resume</a>
+                        <a href="https://drive.google.com/file/d/1lDx30fqkQfHzIcijCxaM36QehCq3VeuA/view?usp=sharing" target="_blank" class="block w-full text-center px-4 py-3 rounded-md bg-primary text-white font-medium hover:bg-primary-dark transition-colors shadow-lg shadow-primary/20">Download Resume</a>
                     </div>
                 </div>
             </div>
